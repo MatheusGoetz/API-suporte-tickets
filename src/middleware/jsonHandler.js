@@ -8,7 +8,7 @@ export async function jsonHandler(req,res) {
   try {
     req.body = JSON.parse(Buffer.concat(buffers).toString())
   } catch (error) {
-    request.body = null
+    req.body = null
   }
 
   res.setHeader("Content-Type", "application/json")
